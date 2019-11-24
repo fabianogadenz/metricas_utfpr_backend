@@ -21,5 +21,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 
 require("./controllers/AuthController")(app);
 require("./controllers/AreasController")(app);
+require("./controllers/UsersController")(app);
+require("./controllers/GrandeAreaController")(app);
 
 app.listen(3333);
