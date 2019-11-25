@@ -42,7 +42,8 @@ router.get('/:_id', async (req, res) => {
 
 router.delete('/:_id', async (req, res) => {
     try{
-        await Area.findByIdAndRemove(req.params._id);
+        console.log(req.params._id);
+        await Area.findOneAndDelete(req.params._id);
         return res.send({removido: true});
     }catch(err){
         return res.status(400).send({error: 'Erro ao excluir dados da area'});
