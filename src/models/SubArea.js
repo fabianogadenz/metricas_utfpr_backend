@@ -1,12 +1,7 @@
 const mongoose = require('mongoose');
 
 const SubAreaSchema = new mongoose.Schema({
-    grandeAreaNome: {
-        type:String,
-        required: true,
-        uppercase: true,
-    },
-    grandeAreaDescricao: {
+    grandeArea: {
         type:String,
         required: true,
         uppercase: true,
@@ -19,10 +14,6 @@ const SubAreaSchema = new mongoose.Schema({
         type:String,
         required: true,
     },
-    codArea: {
-        type:Number,
-        required: true,
-    },
     createdAt:{
         type: Date,
         default: Date.now,
@@ -30,6 +21,6 @@ const SubAreaSchema = new mongoose.Schema({
 });
 
 
-const SubAreaSchema = mongoose.model('SubArea', SubAreaSchema);
+const SubArea = mongoose.model('SubArea', SubAreaSchema);
 
-module.exports = SubAreaSchema;
+module.exports = SubArea;

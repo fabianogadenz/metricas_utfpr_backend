@@ -23,5 +23,6 @@ require("./controllers/AuthController")(app);
 require("./controllers/AreasController")(app);
 require("./controllers/UsersController")(app);
 require("./controllers/GrandeAreaController")(app);
+require("./controllers/SubAreaController")(app);
 
 app.listen(3333);
