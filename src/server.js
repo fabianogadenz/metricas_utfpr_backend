@@ -5,6 +5,9 @@ const cors = require('cors');
 const path = require('path');
 const routes = require('./routes');
 
+
+
+
 const app = express();
 
 mongoose.connect('mongodb+srv://fabianomgadenz:fabianomgadenz@cluster0-dsxky.mongodb.net/test1?retryWrites=true&w=majority', {
@@ -20,6 +23,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
 require("./controllers/AuthController")(app);
+require("./controllers/AtividadeRegistroMySqlController")(app);
 require("./controllers/AreasController")(app);
 require("./controllers/UsersController")(app);
 require("./controllers/GrandeAreaController")(app);
@@ -28,4 +32,7 @@ require("./controllers/TipoAtividadeController")(app);
 require("./controllers/AtividadeRegistrosController")(app);
 require("./controllers/AtividadePontosController")(app);
 
+
 app.listen(3333);
+
+
