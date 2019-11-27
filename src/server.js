@@ -25,5 +25,7 @@ require("./controllers/UsersController")(app);
 require("./controllers/GrandeAreaController")(app);
 require("./controllers/SubAreaController")(app);
 require("./controllers/TipoAtividadeController")(app);
+require("./controllers/AtividadeRegistrosController")(app);
+require("./controllers/AtividadePontosController")(app);
 
 app.listen(3333);
